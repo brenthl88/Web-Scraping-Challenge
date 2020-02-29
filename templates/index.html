@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+ 
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Hot Finds On Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Mars Websites</a></p>
+    </div>
+
+    <!-- Mars Listings -->
+    <div class="row" id="mars-listings">
+      <div class="col-md-6">
+        <h4 class="heading">{{marstabloid.title}}</h4>
+        <small>{{marstabloid.text}}</small>
+          <div class="col-md-6">
+        <a href=""><img srcset={{marstabloid.img_url}},
+     sizes="(max-width: 600px) 50px",800px src={{marstabloid.img_url}}, class="img-thumbnail" alt="{{marstabloid.urlimage}}"></a>
+           </div>
+        </div>
+     </div>
+
+          
+          <!-- Mars Listings -->
+    <div class="row" id="mars-listings">
+      <div class="col-md-4">
+        <h4 class="heading">{{marstabloid.marspanda | safe}}</h4>
+            </div>
+            </div>
+          <!-- Mars Listings -->
+    <div class="row" id="mars-listings">
+      <div class="col-md-4">
+        <h4 class="heading">{{marstabloid.marsweather | safe}}</h4>
+          <a href=""><img srcset={{marstabloid.marscollect[0].img_url}},
+     sizes="(max-width: 600px) 50px",800px src={{marstabloid.marscollect[0].img_url}}, class="img-thumbnail" alt="{{marstabloid.marscollect[0].img_url}}"></a>
+          <a href=""><img srcset={{marstabloid.marscollect[1].img_url}},
+     sizes="(max-width: 600px) 50px",800px src={{marstabloid.marscollect[1].img_url}}, class="img-thumbnail" alt="{{marstabloid.marscollect[1].img_url}}"></a>
+          <a href=""><img srcset={{marstabloid.marscollect[2].img_url}},
+     sizes="(max-width: 600px) 50px",800px src={{marstabloid.marscollect[2].img_url}}, class="img-thumbnail" alt="{{marstabloid.marscollect[2].img_url}}"></a>4
+          <a href=""><img srcset={{marstabloid.marscollect[3].img_url}},
+     sizes="(max-width: 600px) 50px",800px src={{marstabloid.marscollect[3].img_url}}, class="img-thumbnail" alt="{{marstabloid.marscollect[3].img_url}}"></a>
+           </div>
+            </div>
+            </div>
+          
+          
+          
+   <!-- marsdata = {"title":news_title, "text":news_p, "img_url":urlimage, "marspanda":marsp_df_facts, "marscollect":urlcollections, "marsweather":weather, "marsimage":image}
+# Return template and data
+    return render_template("index.html", marstabloid=render_mars)
+marsflask = Flask(__name__) -->
+      </div>
+</body>
+</html>
